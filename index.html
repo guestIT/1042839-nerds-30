@@ -16,7 +16,7 @@
 
   <body class="page-body">
 
-    <header class="header">
+    <header class="page-header header">
 
       <nav class="header-nav main-nav">
         <a class="main-nav-logo">
@@ -45,29 +45,29 @@
 
     </header>
 
-    <main>
+    <main class="page-main main">
 
       <section class="slider">
         <ul class="slider">
           <li class="slider-item slide">
-            <p><strong>Долго, дорого,  скрупулезно.</strong></p>
-            <p>Математически выверенный дизайн  для вашего сайта или мобильного приложения.</p>
+            <p class="slider-clogan"><strong>Долго, дорого, скрупулезно.</strong></p>
+            <p class="slider-direction">Математически выверенный дизайн для вашего сайта или мобильного приложения.</p>
             <a class="btn btn-md" href="#nowhere">Узнать больше</a>
             <div>
               <img src="img/slider/nerds-index-slide1.png" width="760" height="431" alt="слайд первый">
             </div>
           </li>
           <li class="slider-item slide">
-            <p><strong>Любим математику  как никто другой</strong></p>
-            <p>Никакого креатива, только математические формулы для расчета идеальных пропорций</p>
+            <p class="slider-clogan"><strong>Любим математику как никто другой</strong></p>
+            <p class="slider-direction">Никакого креатива, только математические формулы для расчета идеальных пропорций</p>
             <a class="btn btn-md" href="#nowhere">Узнать больше</a>
             <div>
               <img src="img/slider/nerds-index-slide2.png" width="760" height="431" alt="слайд второй">
             </div>
           </li>
           <li class="slider-item slide">
-            <p><strong>Только ночь, только хардкор</strong></p>
-            <p>Работать днем, как все? Мы против этого. Ближе к полуночи работа только начинается.</p>
+            <p class="slider-clogan"><strong>Только ночь, только хардкор</strong></p>
+            <p class="slider-direction">Работать днем, как все? Мы против этого. Ближе к полуночи работа только начинается.</p>
             <a class="slide-btn btn btn-md" href="#nowhere">Узнать больше</a>
             <div>
               <img src="img/slider/nerds-index-slide3.png" width="760" height="431" alt="слайд третий">
@@ -76,9 +76,9 @@
         </ul>
 
         <div class="slider-toggles toogles">
-          <button class="toggles-item toggles-item-active" type="button"></button>
-          <button class="toggles-item" type="button"></button>
-          <button class="toggles-item" type="button"></button>
+          <button class="toggles-item toggles-item-active" type="button" aria-label="кнопка слайда"></button>
+          <button class="toggles-item" type="button" aria-label="кнопка слайда"></button>
+          <button class="toggles-item" type="button" aria-label="кнопка слайда"></button>
         </div>
 
         <section class=offers>
@@ -97,7 +97,7 @@
                 <img src="img/offer/illustration-2.png" width="300" height="146" alt="иллюстрация смартфона">
               </div>
               <h3 class="offer-title">Приложения</h3>
-              <p class="offer-description">Покорите топ-10 приложений  в AppStore и Google Play</p>
+              <p class="offer-description">Покорите топ-10 приложений в AppStore и Google Play</p>
               <a class="offer-btn btn" href="#nowhere">Заказать</a>
             </li>
             <li class="offers-item offer">
@@ -105,7 +105,7 @@
                 <img src="img/offer/illustration-3.png" width="300" height="146" alt="иллюстрация презентации">
               </div>
               <h3 class="offer-title">Презентации</h3>
-              <p class="offer-description">Вы даже не подозреваете,  насколько вы изумительны!</p>
+              <p class="offer-description">Вы даже не подозреваете, насколько вы изумительны!</p>
               <a class="offer-btn btn" href="#nowhere">Заказать</a>
             </li>
           </ul>
@@ -117,48 +117,48 @@
         <p class="about-slogan"><strong>Мы — маленькая, но гордая дизайн-студия из Краснодара.</strong></p>
         <p class="about-description">Исповедуем принципы минимализма и чистоты. Ставим математический расчет превыше креатива. Работаем не покладая рук, как роботы.</p>
         <p>Выполняем заказы на разработку:</p>
-        <ul class="skills-list">
-          <li class="about-skill-item">Веб-сайтов любой сложности</li>
-          <li class="about-skill-item">Мобильных приложений для iOS и Android</li>
-          <li class="about-skill-item">Слайдшоу и видео для корпоративных презентаций</li>
+        <ul class="skills-list skill">
+          <li class="skill-item">Веб-сайтов любой сложности</li>
+          <li class="skill-item">Мобильных приложений для iOS и Android</li>
+          <li class="skill-item">Слайдшоу и видео для корпоративных презентаций</li>
         </ul>
         <div class="color-logo">
           <img src="img/nerds-illustration.png" width="360" height="208" alt="иллюстрация логотип">
         </div>
         <table class="table">
           <caption class="table-title">с 2004 года Любим точность во всем:</caption>
-          <tr class="table-row">
-            <td class="table-data">146<sup>%</sup></td>
-            <td class="table-data">100<sup>%</sup></td>
-            <td class="table-data">50<sup>%</sup></td>
+          <tr class="table-tr">
+            <td class="table-td">146<sup>%</sup></td>
+            <td class="table-td">100<sup>%</sup></td>
+            <td class="table-td">50<sup>%</sup></td>
           </tr>
-          <tr class="table-row">
-            <th class="table-header">Уровень самоотдачи</th>
-            <th class="table-header">Соблюдение сроков</th>
-            <th class="table-header">Минимальная предоплата</th>
+          <tr class="table-tr">
+            <th class="table-th">Уровень самоотдачи</th>
+            <th class="table-th">Соблюдение сроков</th>
+            <th class="table-th">Минимальная предоплата</th>
           </tr>
         </table>
       </section>
 
-      <section class="companies">
+      <section class="partners">
         <h2 class="visually-hidden">Производители</h2>
-        <ul class="companies companies-partners">
-          <li class="companies companies-partners companie-1">
+        <ul class="partners-list">
+          <li class="partners-item partner">
             <a href="#nowhere">
               <img src="img/company/logo-academy.png" width="199" height="68" alt="htmlacademy">
             </a>
           </li>
-          <li class="companies companies-partners companie-2">
+          <li class="partners-item partner">
             <a href="#nowhere">
               <img src="img/company/logo-borodinski.png" width="209" height="90" alt="borodinski">
             </a>
           </li>
-          <li class="companies companies-partners companie-3">
+          <li class="partners-item partner">
             <a href="#nowhere">
               <img src="img/company/logo-pink.png" width="185" height="52" alt="pink">
             </a>
           </li>
-          <li class="companies companies-partners companie-4">
+          <li class="partners-item partner">
             <a href="#nowhere">
               <img src="img/company/logo-mishka.png" width="173" height="84" alt="MISHKA">
             </a>
@@ -169,7 +169,7 @@
 
     </main>
 
-    <footer class="main-footer">
+    <footer class="page-footer footer">
       <div>
         <div class="map">
           <img src="img/map-marker.png" width="1440" height="416" alt="карта">
@@ -181,8 +181,7 @@
           <a class="contacts-link btn btn-md" href="#nowhere">Напишите нам</a>
         </div>
       </div>
-      <div class="footer-social">
-        <ul class="footer-social-list">
+      <ul class="footer-social social">
           <li class="social-item">
             <a class="social-link" href="#nowhere" aria-label="вконтакте">
               <svg width="27" height="15" fill="black" stroke="black" xmlns="http://www.w3.org/2000/svg"><path d="M16.14 11.51c.95-.3 2.18 2.04 3.48 2.94.98.68 1.73.53 1.73.53l3.47-.05s1.82-.1.96-1.55c-.07-.12-.5-1.07-2.59-3.02-2.17-2.05-1.88-1.71.74-5.25 1.6-2.15 2.24-3.46 2.04-4.02-.2-.54-1.37-.4-1.37-.4L20.7.7c-.38 0-.7.12-.85.52 0 0-.62 1.66-1.45 3.08-1.74 2.99-2.43 3.15-2.72 2.96-.66-.43-.5-1.74-.5-2.67 0-2.9.44-4.1-.84-4.41A6.6 6.6 0 0012.5 0c-1.39-.03-2.57 0-3.24.32-.45.23-.79.72-.58.74.26.04.84.16 1.15.59.4.55.4 1.79.4 1.79s.22 3.41-.55 3.83c-.53.3-1.25-.3-2.8-3.01-.8-1.4-1.4-2.92-1.4-2.92s-.1-.29-.32-.45c-.25-.18-.6-.24-.6-.24L.85.68S.29.7.08.95c-.18.21-.01.66-.01.66s2.9 6.89 6.2 10.35c3.02 3.18 6.46 2.97 6.46 2.97h1.55s.47-.05.7-.31c.23-.24.22-.7.22-.7s-.03-2.1.94-2.41z" fill="#fff"/></svg>
@@ -199,10 +198,11 @@
             </a>
           </li>
         </ul>
-      </div>
 
-      <p class="footer-slogan"><strong>Давайте дружить, это выгодно!</strong></p>
-      <p class="footer-discount">Скидка 10% для друзей из социальных сетей.</p>
+        <div>
+          <p class="footer-slogan"><strong>Давайте дружить, это выгодно!</strong></p>
+          <p class="footer-discount">Скидка 10% для друзей из социальных сетей.</p>
+        </div>
 
     </footer>
 
