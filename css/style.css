@@ -64,7 +64,8 @@
   display: none;
 }
 
-.page__wrapper {
+.page__wrapper,
+.slider__wrapper {
   width: 1200px;
   padding: 0 100px;
   margin: 0 auto;
@@ -160,6 +161,16 @@ img {
   opacity: 0.3;
 }
 
+.header__nav {
+  display: flex;
+}
+
+
+.main-nav__list {
+  display: flex;
+}
+
+
 .main-nav__link,
 .basket__link,
 .main-nav__link[href] {
@@ -229,7 +240,7 @@ img {
 
 .slide__tagline {
   font-size: 55px;
- line-height: 55px;
+  line-height: 55px;
 }
 
 .btn {
@@ -266,6 +277,12 @@ img {
 .offers__list {
   display: flex;
   justify-content: space-between;
+}
+
+.offer__description {
+  display: block;
+  position: relative;
+  width: 260px;
 }
 
 .offer__btn {
@@ -309,9 +326,22 @@ img {
 .toggles__item {
   width: 18px;
   height: 18px;
-  color: var(--basic-white);
-  border: none;
+  background-color: var(--basic-white);
+  border: 2px solid #C1C1C1;;
   border-radius: 50%;
+}
+
+.toggles__item-active::after {
+  display: block;
+  position: absolute;
+  content: "";
+  width: 8px;
+  height: 8px;
+  /*top: 50%;
+  left: 50%;*/
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  border: 2px solid #C1C1C1;
 }
 
 /*.header__nav,
@@ -327,9 +357,46 @@ background-color: var(--delicious);
   text-transform: uppercase;
 }
 
+.about {
+  display: flex;
+}
+
+.about::before {
+  display: block;
+  position: absolute;
+  content: "";
+  width: 1158px;
+  height: 2px;
+  background-color: var(--delicious);
+  /*top: 1052px;*/
+}
+
 .about__slogan {
+  display: block;
+  position: relative;
+  width: 651px;
+  height: 91px;
   font-size: 45px;
   line-height: 45px;
+  align-items: center;
+}
+
+.about__description {
+  display: block;
+  position: relative;
+  top: 20px;
+}
+
+.list__description {
+  display: block;
+  position: relative;
+  top: 30px;
+}
+
+.about__skills {
+  display: block;
+  position: relative;
+  top: 25px;
 }
 
 .list__description,
@@ -365,7 +432,9 @@ background-color: var(--delicious);
 
 .partners__list {
   display: flex;
+  position: relative;
   justify-content: space-between;
+  top: 30px;
 }
 
 .partner[href] {
@@ -403,6 +472,13 @@ background-color: var(--delicious);
   color: var(--direct-energy);
 }
 
+
+.contacts__phone > a {
+  text-decoration: none;
+  color: var(--direct-energy);
+}
+
+
 .contacts__btn {
   display: block;
   width: 219px;
@@ -412,15 +488,50 @@ background-color: var(--delicious);
   padding: 15px;
 }
 
+.footer__wrapper {
+  display: flex;
+}
+
+.footer-social {
+  display: flex;
+}
+
+
+.social__item {
+  display: flex;
+  padding-right: 15px;
+}
+
+
 .social__link {
-  display: block;
+  display: flex;
+  content: "";
   width: 81px;
   height: 81px;
-  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
   background-color: var(--grey-social);
-  text-align: center;
-  padding: 30px;
+  border-radius: 50%;
 }
+
+.footer__right {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-left: 139px;
+}
+
+.footer__slogan {
+  font-size: 36px;
+  line-height: 36px;
+}
+
+.footer__discount {
+  line-height: 22px;
+  margin-top: -25px;
+}
+
 
 /* Catalog */
 
@@ -476,18 +587,18 @@ border-color: var(--browser-color);
   opacity: 0.1;
 } */
 
-/* checkbox */
+/* Form */
 
 
 /* btn-form */
 
 
 .form__btn:hover {
-  background: var(--grey-hover);
+  background-color: var(--grey-hover);
 }
 
 .form__btn:focus {
-  background: var(--grey-focus);
+  background-color: var(--grey-focus);
   color: rgba(0, 0, 0, 0.3);
 }
 
@@ -520,32 +631,128 @@ border-color: var(--browser-color);
 
 /* catalog cards*/
 
-.catalog__item::before {
+
+.catalog__item .product__wrapper {
+  display: none;
+}
+.catalog__item:hover .product__wrapper {
+  display: block;
+}
+
+.catalog__item {
+  border: 2px solid #EEEEEE;
+  border-radius: 3px;
+}
+
+/*.catalog__item::before {
   display: block;
   content: "";
   width: 360px;
   height: 40px;
-  background: url(/Documents/GitHub/1042839-nerds-30/img/svg/browser.svg);
-  background-color: var(--browser-color);
+  border: none;
+  background: url(/Documents/GitHub/1042839-nerds-30/img/svg/browser-svg.svg);
+  background-color: rgba(77, 77, 77, 0.12);
+}*/
+
+/*открывает при наведении враппер*/
+
+.product:hover {
+  background-color: var(--gray);
+  box-shadow: 0 0 5px rgba(136, 136, 136, 1);
+}
+
+.catalog__sorting {
+  display: flex;
+  justify-content: space-around;
+}
+
+.sorting__list {
+  display: flex;
+}
+
+.sorting__direction {
+  display: flex;
+}
+
+.catalog__list {
+  display: flex;
+  position: relative;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-bottom: 35px;
+}
+
+.product__wrapper {
+  position: absolute;
+  width: 360px;
+  height: 231px;
+  background-color: var(--delicious);
+  margin-top: -232px;
+  text-align: center;
+}
+
+.product__title {
+  color: var(--basic-black);
+  text-align: center;
+  font-size: 18px;
+  line-height: 30px;
+  text-transform: uppercase;
+  margin-top: 26px;
+}
+
+.product__title:hover {
+  color: var(--orange);
+}
+
+.product__title:focus {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.product__description {
+  color: var(--direct-energy);
+  text-align: center;
+  margin: 0;
+}
+
+.product__link {
+  display: block;
+  content: "";
+  width: 200px;
+  height: 50px;
+  background-color: var(--orange);
+  color: #FFFFFF;
+  border-radius: 3px;
+  text-align: center;
+  padding: 10px;
+  margin: 32px 80px 44px 80px;
+}
+.product__link:hover {
+  background-color: var(--orange-hover);
+}
+
+.product__link:focus {
+  background-color: var(--orange-focus);
 }
 
 /* pagination */
 
 .pagination {
   display: flex;
+  justify-content: space-between;
   color: var(--basic-black);
   margin-right: 750px;
 }
 
 .pagination__item {
   display: flex;
-  justify-content: space-between;
+
 }
 
 .pagination__link {
   display: flex;
   width: 50px;
   height: 50px;
+  size: 16px;
   color: var(--basic-black);
   background: var(--delicious);
   border-radius: 3px;
@@ -554,7 +761,7 @@ border-color: var(--browser-color);
 }
 
 .pagination__link-next {
- height: 50px;
+  height: 50px;
 }
 
 .pagination__link:active {
@@ -562,10 +769,5 @@ border-color: var(--browser-color);
   border: 3px solid #DBDBDB;
 }
 
-/*Дописать изменение кнопок пагинации.
-разобраться с треугольниками
-разметить карточки каталога
-добавить плашки браузера
-разметить форму и изменение цветов в форме*/
 
 
