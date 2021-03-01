@@ -54,13 +54,13 @@
             <legend class="form__price price">Стоимость</legend>
             <ul class="price__list">
               <li class="price__item">
-                <label class="price__area">
+                <label class="price__area" name="min-price">
                   <span class="price__label">от</span>
                   <input class="price__input" type="number" placeholder="0" min="0"  max="15000" step="100" name="min-price">
                 </label>
               </li>
               <li class="price__item">
-                <label class="price__area">
+                <label class="price__area" name="max-price">
                   <span class="price__label">до</span>
                   <input class="price__input" type="number" placeholder="15 000" min="0" max="15000" step="100" name="max-price">
                 </label>
@@ -71,22 +71,22 @@
             <legend class="grid-filter">Сетка</legend>
             <ul class="option__list">
               <li>
-                <label class="option">
-                  <input class="option__input" type="radio" name="grid-filter-name" value="Адаптивная">
+                <label class="option" name="grid">
+                  <input class="option__input" type="radio" name="grid" value="Адаптивная">
                   <span class="option__element"></span>
                   <span class="option__label">Адаптивная</span>
                 </label>
               </li>
               <li>
-                <label class="option">
-                  <input class="option__input" type="radio" name="grid-filter-name" value="Фиксированная">
+                <label class="option" name="grid">
+                  <input class="option__input" type="radio" name="grid" value="Фиксированная">
                   <span class="option__element"></span>
                   <span class="option__label">Фиксированная</span>
                 </label>
               </li>
               <li>
-                <label class="option">
-                  <input class="option__input" type="radio" name="grid-filter-name" value="Резиновая">
+                <label class="option" name="grid">
+                  <input class="option__input" type="radio" name="grid" value="Резиновая">
                   <span class="option__element"></span>
                   <span class="option__label">Резиновая</span>
                 </label>
@@ -97,36 +97,36 @@
             <legend class="features-filter">Особенности:</legend>
             <ul class="option__list">
               <li>
-                <label class="option">
-                  <input class="option__input" type="checkbox" value="Слайдер" checked>
+                <label class="option" name="features-slider">
+                  <input class="option__input" type="checkbox" name="features-slider" value="Слайдер" checked>
                   <span class="option__element"></span>
                   <span class="option__label">Слайдер</span>
                 </label>
               </li>
               <li>
-                <label class="option">
-                  <input class="option__input" type="checkbox" value="Блок преимуществ">
+                <label class="option" name="features-advantages">
+                  <input class="option__input" type="checkbox" name="features-advantages" value="Блок преимуществ">
                   <span class="option__element"></span>
                   <span class="option__label">Блок преимуществ</span>
                 </label>
               </li>
               <li>
-                <label class="option">
-                  <input class="option__input" type="checkbox" value="Новости" checked>
+                <label class="option" name="features-news">
+                  <input class="option__input" type="checkbox" name="features-news" value="Новости" checked>
                   <span class="option__element"></span>
                   <span class="option__label">Новости</span>
                 </label>
               </li>
               <li>
-                <label class="option">
-                  <input class="option__input" type="checkbox" value="Галерея">
+                <label class="option" name="features-gallery">
+                  <input class="option__input" type="checkbox" name="features-gallery" value="Галерея">
                   <span class="option__element"></span>
                   <span class="option__label">Галерея</span>
                 </label>
               </li>
               <li>
-                <label class="option">
-                  <input class="option__input" type="checkbox" value="Корзина">
+                <label class="option" name="features-basket">
+                  <input class="option__input" type="checkbox" name="features-basket" value="Корзина">
                   <span class="option__element"></span>
                   <span class="option__label">Корзина</span>
                 </label>

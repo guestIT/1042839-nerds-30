@@ -2,26 +2,26 @@
 
 @font-face {
   font-family: "Roboto";
-  src: url("fonts/roboto.woff2") format("woff2") ,
-  url("fonts/roboto.woff") format("woff");
+  src: url("/Documents/GitHub/1042839-nerds-30/fonts/roboto.woff2") format("woff2"),
+  url("/Documents/GitHub/1042839-nerds-30/fonts/roboto.woff") format("woff");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Roboto";
-  src: url("fonts/robotomedium.woff2") format("woff2") ,
-  url("fonts/robotomedium.woff") format("woff");
+  src: url("/Documents/GitHub/1042839-nerds-30/fonts/robotomedium.woff2") format("woff2"),
+  url("/Documents/GitHub/1042839-nerds-30/fonts/robotomedium.woff") format("woff");
   font-weight: 500;
-  font-style: normal;
+  font-style: medium;
 }
 
 @font-face {
   font-family: "Roboto";
-  src: url("fonts/robotobold.woff2") format("woff2") ,
-  url("fonts/robotobold.woff") format("woff");
+  src: url("/Documents/GitHub/1042839-nerds-30/fonts/robotobold.woff2") format("woff2"),
+  url("/Documents/GitHub/1042839-nerds-30/fonts/robotobold.woff") format("woff");
   font-weight: 700;
-  font-style: normal;
+  font-style: bold;
 }
 
 /* Variables */
@@ -244,20 +244,20 @@ img {
 }
 
 .btn {
+  display: block;
   height: 50px;
   line-height: 18px;
   text-transform: uppercase;
   color: var(--basic-white);
-}
-
-.slide__btn {
-  position: absolute;
-  width: 240px;
-  background: var(--orange);
   border-radius: 3px;
   text-align: center;
   padding: 15px;
 }
+
+.slide__btn {
+  width: 240px;
+  background: var(--orange);
+  }
 
 .slide__btn:hover,
 .btn__red:hover,
@@ -286,11 +286,7 @@ img {
 }
 
 .offer__btn {
-  display: block;
   width: 160px;
-  border-radius: 3px;
-  text-align: center;
-  padding: 15px;
 }
 
 .btn__red {
@@ -324,24 +320,27 @@ img {
 }
 
 .toggles__item {
+  position: relative;
   width: 18px;
   height: 18px;
   background-color: var(--basic-white);
   border: 2px solid #C1C1C1;;
   border-radius: 50%;
+  cursor: pointer;
 }
 
-.toggles__item-active::after {
+.toggles__item_active::after {
   display: block;
   position: absolute;
   content: "";
   width: 8px;
   height: 8px;
-  /*top: 50%;
-  left: 50%;*/
   border-radius: 50%;
   transform: translate(-50%, -50%);
   border: 2px solid #C1C1C1;
+  top: 50%;
+  left: 50%;
+
 }
 
 /*.header__nav,
@@ -480,12 +479,8 @@ background-color: var(--delicious);
 
 
 .contacts__btn {
-  display: block;
   width: 219px;
   background: var(--orange);
-  border-radius: 3px;
-  text-align: center;
-  padding: 15px;
 }
 
 .footer__wrapper {
@@ -537,26 +532,25 @@ background-color: var(--delicious);
 
 .form__btn,
 .pagination__link-next {
-  display: block;
   width: 260px;
   background: var(--delicious);
   color: var(--basic-black);
-  border: none;
   border-radius: 3px;
+  border: none;
   text-align: center;
   padding: 15px;
-}
+  }
 
 /* Form */
 
-  input[type="number"] {
-    -moz-appearance: textfield;
-    }
+input[type="number"] {
+  -moz-appearance: textfield;
+}
 
-  input[type="number"]:hover,
-  input[type="number"]:focus {
-    -moz-appearance: number-input;
-    }
+input[type="number"]:hover,
+input[type="number"]:focus {
+  -moz-appearance: number-input;
+}
 
 .price__input {
   display: block;
@@ -618,15 +612,15 @@ border-color: var(--browser-color);
 }
 
 .direction__link {
-  color: rgba(166, 166, 166, 0.2);
+  background-image: rgba(166, 166 166, 0.2);
 }
 
 .direction__link:hover {
-  color: var(--basic-gray);
+  background-image: var(--basic-gray);
 }
 
 .direction__link:focus:active {
-  color: var(--direction-black);
+  background-image: var(--direction-black);
 }
 
 /* catalog cards*/
