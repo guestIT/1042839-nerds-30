@@ -12,7 +12,7 @@
   </head>
   <body class="page__body">
     <header class="page__header header">
-      <div class="page__wrapper">
+      <div class="page__wrapper header__wrapper">
         <nav class="header__nav main-nav">
           <a class="main-nav__logo" href="index.html">
             <svg width="160" height="66" fill="black" xmlns="http://www.w3.org/2000/svg">
@@ -51,42 +51,52 @@
         <h2 class="visually-hidden">Фильтр шаблонов</h2>
         <form class="catalog__form form" method="get" action="https://echo.htmlacademy.ru">
           <fieldset class="form__block">
-            <legend class="form__price price">Стоимость</legend>
-            <ul class="price__list">
-              <li class="price__item">
-                <label class="price__area" name="min-price">
-                  <span class="price__label">от</span>
-                  <input class="price__input" type="number" placeholder="0" min="0"  max="15000" step="100" name="min-price">
+            <legend class="form__subtitle">Стоимость:</legend>
+            <div class="form__range range-filter">
+              <div class="range-controls">
+                <div class="scale">
+                  <div class="bar" style="
+                    width: 30%;
+                    margin-left: 20%
+                  "></div>
+                </div>
+                <div class="toggle toggle-min" tabindex="0" style="
+                  left: 20%
+                "></div>
+                <div class="toggle toggle-max" tabindex="0" style="
+                  left: 50%
+                "></div>
+              </div>
+              <div class="price-controls">
+                <label class="min-price">
+                  от <input type="number" name="min-price" value="0">
                 </label>
-              </li>
-              <li class="price__item">
-                <label class="price__area" name="max-price">
-                  <span class="price__label">до</span>
-                  <input class="price__input" type="number" placeholder="15 000" min="0" max="15000" step="100" name="max-price">
+                <label class="max-price">
+                  до <input type="number" name="max-price" value="15000">
                 </label>
-              </li>
-            </ul>
+              </div>
+            </div>
           </fieldset>
           <fieldset class="form__block">
-            <legend class="grid-filter">Сетка</legend>
-            <ul class="option__list">
-              <li>
-                <label class="option" name="grid">
-                  <input class="option__input" type="radio" name="grid" value="Адаптивная">
+            <legend class="form__subtitle">Сетка:</legend>
+            <ul class="option-list">
+              <li class="option-list__item">
+                <label class="option">
+                  <input class="visually-hidden" type="radio" name="grid" value="Адаптивная">
                   <span class="option__element"></span>
                   <span class="option__label">Адаптивная</span>
                 </label>
               </li>
-              <li>
-                <label class="option" name="grid">
-                  <input class="option__input" type="radio" name="grid" value="Фиксированная">
+              <li class="option-list__item">
+                <label class="option">
+                  <input class="visually-hidden" type="radio" name="grid" value="Фиксированная" checked>
                   <span class="option__element"></span>
                   <span class="option__label">Фиксированная</span>
                 </label>
               </li>
-              <li>
-                <label class="option" name="grid">
-                  <input class="option__input" type="radio" name="grid" value="Резиновая">
+              <li class="option-list__item">
+                <label class="option">
+                  <input class="visually-hidden" type="radio" name="grid" value="Резиновая">
                   <span class="option__element"></span>
                   <span class="option__label">Резиновая</span>
                 </label>
@@ -94,53 +104,53 @@
             </ul>
           </fieldset>
           <fieldset class="form__block">
-            <legend class="features-filter">Особенности:</legend>
-            <ul class="option__list">
-              <li>
-                <label class="option" name="features-slider">
-                  <input class="option__input" type="checkbox" name="features-slider" value="Слайдер" checked>
+            <legend class="form__subtitle">Особенности:</legend>
+            <ul class="option-list">
+              <li class="option-list__item">
+                <label class="option">
+                  <input class="visually-hidden" type="checkbox" name="features-slider" value="Слайдер" checked>
                   <span class="option__element"></span>
                   <span class="option__label">Слайдер</span>
                 </label>
               </li>
-              <li>
-                <label class="option" name="features-advantages">
-                  <input class="option__input" type="checkbox" name="features-advantages" value="Блок преимуществ">
+              <li class="option-list__item">
+                <label class="option">
+                  <input class="visually-hidden" type="checkbox" name="features-advantages" value="Блок преимуществ">
                   <span class="option__element"></span>
                   <span class="option__label">Блок преимуществ</span>
                 </label>
               </li>
-              <li>
-                <label class="option" name="features-news">
-                  <input class="option__input" type="checkbox" name="features-news" value="Новости" checked>
+              <li class="option-list__item">
+                <label class="option">
+                  <input class="visually-hidden" type="checkbox" name="features-news" value="Новости" checked>
                   <span class="option__element"></span>
                   <span class="option__label">Новости</span>
                 </label>
               </li>
-              <li>
-                <label class="option" name="features-gallery">
-                  <input class="option__input" type="checkbox" name="features-gallery" value="Галерея">
+              <li class="option-list__item">
+                <label class="option">
+                  <input class="visually-hidden" type="checkbox" name="features-gallery" value="Галерея">
                   <span class="option__element"></span>
                   <span class="option__label">Галерея</span>
                 </label>
               </li>
-              <li>
-                <label class="option" name="features-basket">
-                  <input class="option__input" type="checkbox" name="features-basket" value="Корзина">
+              <li class="option-list__item">
+                <label class="option">
+                  <input class="visually-hidden" type="checkbox" name="features-basket" value="Корзина" disabled>
                   <span class="option__element"></span>
                   <span class="option__label">Корзина</span>
                 </label>
               </li>
             </ul>
           </fieldset>
-          <button class="form__btn btn" type="submit">Показать</button>
+          <button class="form__btn btn btn_full btn_grey" type="submit">Показать</button>
         </form>
         <div class="catalog__main">
           <div class="catalog__sorting sorting">
-            <p class="sorting__text">Сортировать</p>
+            <p class="sorting__text">Сортировать:</p>
             <ul class="sorting__list">
               <li class="sorting__item">
-                <a class="sorting__link" href="#price">по цене</a>
+                <a class="sorting__link sorting__link_active " href="#price">по цене</a>
               </li>
               <li class="sorting__item">
                 <a class="sorting__link" href="#type">по типу</a>
@@ -151,17 +161,17 @@
             </ul>
             <ul class="sorting__direction direction">
               <li class="direction__item">
-                <a class="direction__link" href="#down" aria-label="вниз">
+                <a class="direction__link direction__link_active" href="#down" aria-label="вниз">
                   <svg width="11" height="10" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M5.5 10L0 0h11" fill="#A6A6A6"/>
-                    </svg>
+                  </svg>
                 </a>
               </li>
               <li class="direction__item">
                 <a class="direction__link" href="#up" aria-label="вверх">
                   <svg width="11" height="10" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M5.5 0L0 10h11L5.5 0z" fill="#A6A6A6"/>
-                    </svg>
+                  </svg>
                 </a>
               </li>
             </ul>
@@ -191,7 +201,7 @@
                     <h3>Pink App</h3>
                   </a>
                   <p class="product__description">Продуктовый лендинг <br> приложения для iOS и Android</p>
-                    <a class="product__link" href="#nowhere">9 900 &#8381;</a>
+                  <a class="product__link" href="#nowhere">9 900 &#8381;</a>
                 </div>
               </article>
             </li>
@@ -254,7 +264,7 @@
           </ul>
           <ul class="catalog__pagination pagination">
             <li class="pagination__item">
-              <a class="pagination__link">1</a>
+              <a class="pagination__link pagination__link_active">1</a>
             </li>
             <li class="pagination__item">
               <a class="pagination__link" href="#2">2</a>
@@ -263,53 +273,76 @@
               <a class="pagination__link" href="#3">3</a>
             </li>
             <li class="pagination__item">
-              <a class="pagination__link-next" href="#next">Следующая</a>
+              <a class="pagination__link pagination__link_next" href="#next">Следующая</a>
             </li>
           </ul>
         </div>
       </section>
     </main>
     <footer class="page__footer footer">
-      <div class="page__wrapper footer__map">
-        <img src="img/map-marker.png" width="1440" height="416" alt="карта">
-        <div class="page__wrapper">
+        <div class="page__wrapper footer__wrapper">
           <div class="footer__contacts contacts">
-            <p class="contacts__title">Nerds Design Studio</p>
+            <p class="contacts__title">Nёrds design studio</p>
             <p class="contacts__address">191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
-            <p class="contacts__phone">тел. <a href="tel:+78122757575">+7 (812) 275-75-75</a> </p>
-            <a class="contacts__btn btn" href="#nowhere">Напишите нам</a>
+            <p class="contacts__phone">тел. <a href="tel:+78122757575">+7 (812) 275-75-75</a></p>
+            <a class="contacts__btn btn btn_full" href="#nowhere">Напишите нам</a>
+          </div>
+        </div>
+        <div class="footer__map">
+          <img src="img/map-marker.png" width="1440" height="416" alt="карта">
+        </div>
+        <div class="page__wrapper">
+        <div class="footer__bottom">
+          <ul class="footer__social social">
+            <li class="social__item">
+              <a class="social__link" href="#nowhere" aria-label="вконтакте">
+                <svg width="27" height="15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M16.14 11.51c.95-.3 2.18 2.04 3.48 2.94.98.68 1.73.53 1.73.53l3.47-.05s1.82-.1.96-1.55c-.07-.12-.5-1.07-2.59-3.02-2.17-2.05-1.88-1.71.74-5.25 1.6-2.15 2.24-3.46 2.04-4.02-.2-.54-1.37-.4-1.37-.4L20.7.7c-.38 0-.7.12-.85.52 0 0-.62 1.66-1.45 3.08-1.74 2.99-2.43 3.15-2.72 2.96-.66-.43-.5-1.74-.5-2.67 0-2.9.44-4.1-.84-4.41A6.6 6.6 0 0012.5 0c-1.39-.03-2.57 0-3.24.32-.45.23-.79.72-.58.74.26.04.84.16 1.15.59.4.55.4 1.79.4 1.79s.22 3.41-.55 3.83c-.53.3-1.25-.3-2.8-3.01-.8-1.4-1.4-2.92-1.4-2.92s-.1-.29-.32-.45c-.25-.18-.6-.24-.6-.24L.85.68S.29.7.08.95c-.18.21-.01.66-.01.66s2.9 6.89 6.2 10.35c3.02 3.18 6.46 2.97 6.46 2.97h1.55s.47-.05.7-.31c.23-.24.22-.7.22-.7s-.03-2.1.94-2.41z" fill="#fff"/>
+                </svg>
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link" href="#nowhere" aria-label="фейсбук">
+                <svg width="12" height="22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 4V0H8a4 4 0 00-4 4v4H0v4h4v10h4V12h4V8H8V4h4z" fill="#fff"/>
+                </svg>
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link" href="#nowhere" aria-label="инстаграмм">
+                <svg width="21" height="21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M3 0h15a3 3 0 013 3v15a3 3 0 01-3 3H3a3 3 0 01-3-3V3a3 3 0 013-3zm11 10.5a3.5 3.5 0 10-7 0 3.5 3.5 0 007 0zM3 18V9h1.18a6.5 6.5 0 1012.64 0H18v9H3zM14 7h4V3h-4v4z" fill="#fff"/>
+                </svg>
+              </a>
+            </li>
+          </ul>
+          <div class="footer__right">
+            <p class="footer__slogan"><strong>Давайте дружить, это выгодно!</strong></p>
+            <p class="footer__discount">Скидка 10% для друзей из социальных сетей.</p>
           </div>
         </div>
       </div>
-      <div class="page__wrapper footer__wrapper">
-        <ul class="footer-social social">
-          <li class="social__item">
-            <a class="social__link" href="#nowhere" aria-label="вконтакте">
-              <svg width="27" height="15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M16.14 11.51c.95-.3 2.18 2.04 3.48 2.94.98.68 1.73.53 1.73.53l3.47-.05s1.82-.1.96-1.55c-.07-.12-.5-1.07-2.59-3.02-2.17-2.05-1.88-1.71.74-5.25 1.6-2.15 2.24-3.46 2.04-4.02-.2-.54-1.37-.4-1.37-.4L20.7.7c-.38 0-.7.12-.85.52 0 0-.62 1.66-1.45 3.08-1.74 2.99-2.43 3.15-2.72 2.96-.66-.43-.5-1.74-.5-2.67 0-2.9.44-4.1-.84-4.41A6.6 6.6 0 0012.5 0c-1.39-.03-2.57 0-3.24.32-.45.23-.79.72-.58.74.26.04.84.16 1.15.59.4.55.4 1.79.4 1.79s.22 3.41-.55 3.83c-.53.3-1.25-.3-2.8-3.01-.8-1.4-1.4-2.92-1.4-2.92s-.1-.29-.32-.45c-.25-.18-.6-.24-.6-.24L.85.68S.29.7.08.95c-.18.21-.01.66-.01.66s2.9 6.89 6.2 10.35c3.02 3.18 6.46 2.97 6.46 2.97h1.55s.47-.05.7-.31c.23-.24.22-.7.22-.7s-.03-2.1.94-2.41z" fill="#fff"/>
-              </svg>
-            </a>
-          </li>
-          <li class="social__item">
-            <a class="social__link" href="#nowhere" aria-label="фейсбук">
-              <svg width="12" height="22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M12 4V0H8a4 4 0 00-4 4v4H0v4h4v10h4V12h4V8H8V4h4z" fill="#fff"/>
-              </svg>
-            </a>
-          </li>
-          <li class="social__item">
-            <a class="social__link" href="#nowhere" aria-label="инстаграмм">
-              <svg width="21" height="21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M3 0h15a3 3 0 013 3v15a3 3 0 01-3 3H3a3 3 0 01-3-3V3a3 3 0 013-3zm11 10.5a3.5 3.5 0 10-7 0 3.5 3.5 0 007 0zM3 18V9h1.18a6.5 6.5 0 1012.64 0H18v9H3zM14 7h4V3h-4v4z" fill="#fff"/>
-              </svg>
-            </a>
-          </li>
-        </ul>
-        <div class="footer__right">
-          <p class="footer__slogan"><strong>Давайте дружить, это выгодно!</strong></p>
-          <p class="footer__discount">Скидка 10% для друзей из социальных сетей.</p>
-        </div>
-      </div>
     </footer>
+    <section class="popup">
+      <h2 class="popup__head">Напишите нам</h2>
+      <form class="popup__form" method="post" name="contact" action="https://echo.htmlacademy.ru">
+        <div class="popup__row">
+          <label class="popup__field">
+            <span class="popup__label">Ваше имя:</span>
+            <input class="popup__input" name="name" type="text" placeholder="Имя Фамилия" required>
+          </label>
+          <label class="popup__field">
+            <span class="popup__label">Ваш email:</span>
+            <input class="popup__input" name="name" type="email" placeholder="email@example.com" required>
+          </label>
+        </div>
+        <label class="popup__field">
+          <span class="popup__label">Текст письма:</span>
+          <textarea class="popup__textarea" name="msg" placeholder="В свободной форме" required></textarea>
+        </label>
+        <button class="popup__btn btn" type="submit">Отправить</button>
+      </form>
+      <button class="popup__close" type="button" aria-label="закрыть"></button>
+    </section>
   </body>
-  </html>
+</html>
